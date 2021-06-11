@@ -1,0 +1,14 @@
+C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Application\bin\Debug\netcoreapp3.1\DevEvolucional.Application.deps.json
+C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Application\bin\Debug\netcoreapp3.1\DevEvolucional.Application.dll
+C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Application\bin\Debug\netcoreapp3.1\DevEvolucional.Application.pdb
+C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Application\bin\Debug\netcoreapp3.1\DevEvolucional.Core.dll
+C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Application\bin\Debug\netcoreapp3.1\DevEvolucional.Infrastructure.dll
+C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Application\bin\Debug\netcoreapp3.1\DevEvolucional.Core.pdb
+C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Application\bin\Debug\netcoreapp3.1\DevEvolucional.Infrastructure.pdb
+C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Application\obj\Debug\netcoreapp3.1\DevEvolucional.Application.csproj.AssemblyReference.cache
+C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Application\obj\Debug\netcoreapp3.1\DevEvolucional.Application.AssemblyInfoInputs.cache
+C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Application\obj\Debug\netcoreapp3.1\DevEvolucional.Application.AssemblyInfo.cs
+C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Application\obj\Debug\netcoreapp3.1\DevEvolucional.Application.csproj.CoreCompileInputs.cache
+C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Application\obj\Debug\netcoreapp3.1\DevEvolucional.Application.csproj.CopyComplete
+C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Application\obj\Debug\netcoreapp3.1\DevEvolucional.Application.dll
+C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Application\obj\Debug\netcoreapp3.1\DevEvolucional.Application.pdb
