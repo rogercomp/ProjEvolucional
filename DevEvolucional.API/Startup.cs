@@ -41,6 +41,7 @@ namespace DevEvolucional.API
             services.AddScoped<IDisciplinaRepository, DisciplinaRepository>();
             services.AddScoped<IAuthService, AuthService>();
 
+            services.AddMvcCore().AddApiExplorer();
 
             services.AddSwaggerGen(c =>
             {

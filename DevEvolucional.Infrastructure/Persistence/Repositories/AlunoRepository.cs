@@ -38,7 +38,6 @@ namespace DevEvolucional.Infrastructure.Persistence.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
-
         public async Task SaveChangesAsync()
         {
             await _dbContext.SaveChangesAsync();
@@ -48,6 +47,5 @@ namespace DevEvolucional.Infrastructure.Persistence.Repositories
         {
             return await _dbContext.Alunos.SingleOrDefaultAsync(p => p.Id == id);
         }
-
     }
 }

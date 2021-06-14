@@ -12,7 +12,7 @@ namespace DevEvolucional.Infrastructure.Persistence.Repositories
     public class DisciplinaRepository : IDisciplinaRepository
     {
         private readonly string _connectionString;
-        private readonly DevEvolucionalDbContext _dbContext;
+       
         public DisciplinaRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("DevEvolucionalCs");
@@ -30,8 +30,6 @@ namespace DevEvolucional.Infrastructure.Persistence.Repositories
 
                 return listaDisciplinas.ToList();
             }
-
-
         }
     }
 }
