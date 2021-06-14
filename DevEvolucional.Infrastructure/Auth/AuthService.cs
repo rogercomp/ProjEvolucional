@@ -37,7 +37,7 @@ namespace DevEvolucional.Infrastructure.Auth
             }
         }
 
-        public string GenerateJwtToken(string email, string role)
+        public string GenerateJwtToken(string login)
         {
             var issuer = _configuration["Jwt:Issuer"];
             var audience = _configuration["Jwt:Audience"];
@@ -47,8 +47,7 @@ namespace DevEvolucional.Infrastructure.Auth
 
             var claims = new List<Claim>
             {
-                new Claim("userName", email),
-                new Claim(ClaimTypes.Role, role)
+                new Claim("userName", login)
             };
 
             var token = new JwtSecurityToken(
@@ -65,9 +64,5 @@ namespace DevEvolucional.Infrastructure.Auth
             return stringToken;
         }
 
-        public string GenerateJwtToken(string login)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

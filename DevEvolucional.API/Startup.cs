@@ -37,12 +37,14 @@ namespace DevEvolucional.API
             services.AddDbContext<DevEvolucionalDbContext>(options => options.UseSqlServer(connectionString));
             //services.AddDbContext<DevEvolucionalDbContext>(options => options.UseInMemoryDatabase("DevEvolucional"));
 
+            services.AddAuthorization(); 
+
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<IDisciplinaRepository, DisciplinaRepository>();
             services.AddScoped<IAuthService, AuthService>();
-
+           
             services.AddMvcCore().AddApiExplorer();
-
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DevEvolucional.API", Version = "v1" });
@@ -109,7 +111,7 @@ namespace DevEvolucional.API
 
             app.UseAuthentication();
             app.UseAuthorization();
-
+                       
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
