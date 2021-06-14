@@ -1,9 +1,0 @@
-C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Core\bin\Debug\netcoreapp3.1\DevEvolucional.Core.deps.json
-C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Core\bin\Debug\netcoreapp3.1\DevEvolucional.Core.dll
-C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Core\bin\Debug\netcoreapp3.1\DevEvolucional.Core.pdb
-C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Core\obj\Debug\netcoreapp3.1\DevEvolucional.Core.csproj.AssemblyReference.cache
-C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Core\obj\Debug\netcoreapp3.1\DevEvolucional.Core.AssemblyInfoInputs.cache
-C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Core\obj\Debug\netcoreapp3.1\DevEvolucional.Core.AssemblyInfo.cs
-C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Core\obj\Debug\netcoreapp3.1\DevEvolucional.Core.csproj.CoreCompileInputs.cache
-C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Core\obj\Debug\netcoreapp3.1\DevEvolucional.Core.dll
-C:\Users\rcdpr\OneDrive\Documentos\C#\projeto-evolucional\DevEvolucional.Core\obj\Debug\netcoreapp3.1\DevEvolucional.Core.pdb

@@ -11,19 +11,10 @@ namespace DevEvolucional.Infrastructure.Persistence.Repositories
     public class UsuarioRepository : IUsuarioRepository
     {
         private readonly DevEvolucionalDbContext _dbContext;
+
         public UsuarioRepository(DevEvolucionalDbContext dbContext)
         {
             _dbContext = dbContext;
-        }
-
-        public Task AddAsync(Aluno aluno)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<List<Aluno>> GetAllAsync()
-        {
-            throw new NotImplementedException();
         }
 
         public async Task<Usuario> GetByIdAsync(int id)
@@ -31,26 +22,11 @@ namespace DevEvolucional.Infrastructure.Persistence.Repositories
             return await _dbContext.Usuarios.SingleOrDefaultAsync(u => u.Id == id);
         }
 
-        public Task<Aluno> GetDetailsByIdAsync(int id)
+        public async Task<Usuario> GetUserByEmailAndPasswordAsync(string login, string passwordHash)
         {
-            throw new NotImplementedException();
+            return await _dbContext
+                .Usuarios
+                .SingleOrDefaultAsync(u => u.Login == login && u.Senha == passwordHash);
         }
-
-        public Task<Usuario> GetUserByEmailAndPasswordAsync(string login, string passwordHash)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task SaveChangesAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        //public async Task<Usuario> GetUserByEmailAndPasswordAsync(string email, string passwordHash)
-        //{
-        //    return await _dbContext
-        //        .Users
-        //        .SingleOrDefaultAsync(u => u.Email == email && u.Password == passwordHash);
-        //}
     }
 }
