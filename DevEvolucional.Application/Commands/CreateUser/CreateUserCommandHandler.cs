@@ -21,7 +21,7 @@ namespace DevEvolucional.Application.Commands.CreateUser
         {
             var passwordHash = _authService.ComputeSha256Hash(request.Senha);
 
-            var user = new Usuario(request.Login, passwordHash);
+            var user = new Usuario(request.Login, passwordHash, request.Role);
 
             await _dbContext.Usuarios.AddAsync(user);
             await _dbContext.SaveChangesAsync();

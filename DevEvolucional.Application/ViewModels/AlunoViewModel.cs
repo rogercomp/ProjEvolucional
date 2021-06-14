@@ -6,13 +6,13 @@ namespace DevEvolucional.Application.ViewModels
 {
     public class AlunoViewModel
     {
-        public AlunoViewModel(int id, string descricao)
+        public AlunoViewModel(int id, string nome)
         {
             Id = id;
-            Descricao = descricao;
+            Nome = nome;
         }
 
         public int Id { get; private set; }
-        public string Descricao { get; private set; }
+        public string Nome { get; private set; }
     }
 }

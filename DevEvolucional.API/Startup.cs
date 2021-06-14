@@ -1,4 +1,9 @@
 using DevEvolucional.API.Filters;
+using DevEvolucional.Application.Commands.CreateStudent;
+using DevEvolucional.Application.Commands.CreateUser;
+using DevEvolucional.Application.Commands.LoginUser;
+using DevEvolucional.Application.Queries;
+using DevEvolucional.Application.Queries.GetStudentById;
 using DevEvolucional.Core.Repositories;
 using DevEvolucional.Core.Services;
 using DevEvolucional.Infrastructure.Auth;
@@ -42,9 +47,17 @@ namespace DevEvolucional.API
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<IDisciplinaRepository, DisciplinaRepository>();
             services.AddScoped<IAuthService, AuthService>();
-           
+            services.AddScoped<IAlunoRepository, AlunoRepository>();
+
             services.AddMvcCore().AddApiExplorer();
-            
+
+            services.AddMediatR(typeof(CreateUserCommand));
+            services.AddMediatR(typeof(LoginUserCommand));
+            services.AddMediatR(typeof(CreateStudentCommand));
+
+            services.AddMediatR(typeof(GetAllStudentsQuery));
+            services.AddMediatR(typeof(GetStudentByIdQuery));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DevEvolucional.API", Version = "v1" });

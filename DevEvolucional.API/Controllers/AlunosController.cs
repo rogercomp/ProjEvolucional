@@ -7,10 +7,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Threading.Tasks;
+using DevEvolucional.Application.Commands.CreateStudent;
+using DevEvolucional.Application.Queries;
+using DevEvolucional.Application.Queries.GetStudentById;
 
 namespace DevEvolucional.API.Controllers
 {
-    [Route("api/users")]
+    [Route("api/alunos")]
     [Authorize]
     public class AlunosController : ControllerBase
     {
@@ -20,45 +23,47 @@ namespace DevEvolucional.API.Controllers
             _mediator = mediator;
         }
 
-        // api/users
+        // api/alunos?query=net core
+        [HttpGet]
+        //[Authorize(Roles = "client, freelancer")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Get(string query)
+        {
+            var getAllStudentsQuery = new GetAllStudentsQuery(query);
+
+            var students = await _mediator.Send(getAllStudentsQuery);
+
+            return Ok(students);
+        }
+
+        // api/students
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Post([FromBody] CreateUserCommand command)
+        public async Task<IActionResult> Post([FromBody] CreateStudentCommand command)
         {
             var id = await _mediator.Send(command);
 
             return CreatedAtAction(nameof(GetById), new { id = id }, command);
         }
 
-        // api/users/1
+        // api/alunos/2
         [HttpGet("{id}")]
+        //[Authorize(Roles = "client, freelancer")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetById(int id)
         {
-            var query = new GetUserQuery(id);
+            var query = new GetStudentByIdQuery(id);
 
-            var user = await _mediator.Send(query);
+            var aluno = await _mediator.Send(query);
 
-            if (user == null)
+            if (aluno == null)
             {
                 return NotFound();
             }
 
-            return Ok(user);
+            return Ok(aluno);
         }
 
-        // api/users/login
-        [HttpPut("login")]
-        [AllowAnonymous]
-        public async Task<IActionResult> Login([FromBody] LoginUserCommand command)
-        {
-            var loginUserviewModel = await _mediator.Send(command);
 
-            if (loginUserviewModel == null)
-            {
-                return BadRequest();
-            }
-
-            return Ok(loginUserviewModel);
-        }
     }
 }

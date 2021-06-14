@@ -5,7 +5,7 @@ namespace DevEvolucional.Core.Entities
 {
     public class Usuario : BaseEntity
     {
-        public Usuario(string login, string senha)
+        public Usuario(string login, string senha, string role)
         {
             Login = login;
             Senha = senha;
@@ -16,7 +16,7 @@ namespace DevEvolucional.Core.Entities
             //CreatedAt = DateTime.Now;
             //Active = true;
             //Password = password;
-            //Role = role;
+            Role = role;
 
             //Skills = new List<UserSkill>();
             //OwnedProjects = new List<Project>();
@@ -32,7 +32,7 @@ namespace DevEvolucional.Core.Entities
         //public DateTime CreatedAt { get; private set; }
         //public bool Active { get; set; }
         //public string Password { get; private set; }
-        //public string Role { get; private set; }
+        public string Role { get; private set; }
 
 
         //public List<UserSkill> Skills { get; private set; }
